@@ -1,0 +1,51 @@
+﻿@model Student
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thanks</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:300,400,700,800">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/app.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/MvcEcommerce.styles.css" asp-append-version="true" />
+</head>
+<body>
+
+
+
+    <div class="container m-4">
+        <div class="card mx-auto" style="width:500px;">
+            <div class="card-header">
+                <h2>Merhaba @Model.Name</h2>
+
+            </div>
+            <div class="card-body">
+                @if (Model.Confirm == true)
+                {
+                    <span>
+                        Kursa katılmış olduğunuzdan dolayı mutlu olduk.
+                    </span>
+                    <div>
+                        Diğer katılımcıları <a asp-action="List">görüntüle.</a>
+                    </div>
+                }
+                else
+                {
+                    <span>
+                        Üzüldük. Umarım fikriniz değişir.
+                    </span>
+                }
+            </div>
+        </div>
+
+    </div>
+
+    
+
+
+</body>
+
+</html>
